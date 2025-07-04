@@ -1,17 +1,17 @@
 {
   "name": "eventar",
-  "description": "A powerful, customizable, and lightweight React calendar component with seamless event management.",
+  "description": "A powerful, customizable, and lightweight React calendar component with seamless event management. - By OpenLoft",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YasirMansoori/Eventar.git"
+    "url": "https://github.com/open-loft/Eventar"
   },
-  "homepage": "https://eventar.yasirmansoori.in/",
+  "homepage": "https://eventar.openloft.in/",
   "sideEffects": [
     "**/*.css"
   ],
