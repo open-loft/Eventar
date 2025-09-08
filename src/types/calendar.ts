@@ -78,6 +78,7 @@ export interface EventarProps {
   showClock?: boolean;
   resources?: Resource[];
   specialDays?: SpecialDay[];
+  startOfWeek?: "Mon" | "Tue" | "Wed" | "Thu" | "Fri" | "Sat" | "Sun";
 }
 
 export interface RenderViewProps {
@@ -95,6 +96,7 @@ export interface RenderViewProps {
   setIsEventModalOpen: (isOpen: boolean) => void;
   agendaView: boolean;
   specialDays: SpecialDay[];
+  startOfWeek?: "Mon" | "Tue" | "Wed" | "Thu" | "Fri" | "Sat" | "Sun";
 }
 
 export interface CalendarHeaderProps {

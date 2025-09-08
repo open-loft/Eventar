@@ -16,9 +16,10 @@ export function WeekView({
   handleEventClick,
   isLoading,
   specialDays,
+  startOfWeek
 }: WeekViewProps) {
   const { weekDays, hours, fullDayEvents, isPastDate } =
-    useWeekViewCalculations(date, events, showPastDates);
+    useWeekViewCalculations(date, events, showPastDates, startOfWeek);
 
   if (isLoading) {
     return <WeekViewSkeleton />;
