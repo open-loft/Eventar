@@ -1,5 +1,3 @@
-> Current Stable Version: 1.0.5
-
 # 🗓️ **Eventar: The Modern React Calendar Library**  
 
 **A powerful, customizable, and lightweight React calendar component with seamless event management.**  
