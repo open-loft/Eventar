@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import { SpinnerVariant } from "./spinner.types";
 
 export type CalendarEvent = {

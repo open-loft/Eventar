@@ -1,4 +1,4 @@
-> Current Stable Version: 1.0.3
+> Current Stable Version: 1.0.5
 
 # 🗓️ **Eventar: The Modern React Calendar Library**  
 
