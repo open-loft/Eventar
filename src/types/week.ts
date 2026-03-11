@@ -7,6 +7,7 @@ export interface WeekViewProps {
   handleEventClick?: (e: React.MouseEvent, event: CalendarEvent) => void;
   isLoading?: boolean;
   specialDays?: SpecialDay[];
+  startOfWeek?: "Mon" | "Tue" | "Wed" | "Thu" | "Fri" | "Sat" | "Sun";
 }
 
 export interface WeekHeaderProps {

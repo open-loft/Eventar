@@ -34,6 +34,7 @@ export function Eventar({
   showClock = false,
   resources = [],
   specialDays = [],
+  startOfWeek = "Sun"
 }: EventarProps) {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(
@@ -155,6 +156,7 @@ export function Eventar({
                 setIsEventModalOpen,
                 agendaView,
                 specialDays,
+                startOfWeek
               })}
             </ErrorBoundary>
           </motion.main>

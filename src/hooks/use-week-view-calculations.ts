@@ -5,18 +5,25 @@ import type { CalendarEvent } from "@/types/calendar";
 export function useWeekViewCalculations(
   date: Date,
   events: CalendarEvent[],
-  showPastDates: boolean
+  showPastDates: boolean,
+  startOfWeek: "Mon" | "Tue" | "Wed" | "Thu" | "Fri" | "Sat" | "Sun"
 ) {
   const weekDays = useMemo(() => {
-    const startOfWeek = new Date(date);
-    startOfWeek.setDate(date.getDate() - date.getDay());
+    const weekDaysMap = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+    const startIdx = startOfWeek
+      ? weekDaysMap.indexOf(startOfWeek.trim().toLowerCase())
+      : 1;
+    const todayIdx = date.getDay();
+    const diff = (todayIdx - startIdx + 7) % 7;
+    const startOfWeekDate = new Date(date);
+    startOfWeekDate.setDate(date.getDate() - diff);
 
     return Array.from({ length: 7 }, (_, i) => {
-      const day = new Date(startOfWeek);
-      day.setDate(startOfWeek.getDate() + i);
+      const day = new Date(startOfWeekDate);
+      day.setDate(startOfWeekDate.getDate() + i);
       return day;
     });
-  }, [date]);
+  }, [date, startOfWeek]);
 
   const hours = useMemo(() => Array.from({ length: 24 }, (_, i) => i), []);
 
